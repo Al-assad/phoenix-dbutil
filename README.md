@@ -23,6 +23,8 @@
 * 适合直接嵌入到 Flink Job 等对包体依赖要求较为苛刻的场景使用。
 * 可以通过替换 pom 中的 phoenix-client 版本兼容多个版本的 phoenix-client。
 
+<br>
+
 ### 环境要求
 
 * JDK 1.8 + 
@@ -38,7 +40,7 @@
 
 ### 快速使用
 
-完整使用可以参考 site.assad.phoenix.dbutil
+完整使用可以参考 [site.assad.phoenix.dbutil](https://github.com/Al-assad/phoenix-dbutil/tree/master/src/test)
 
 以下示例实体 Record 结构：
 
@@ -52,8 +54,6 @@ public class Record {
   	...
 }
 ```
-
-<br>
 
 #### select 查询操作
 
@@ -79,8 +79,6 @@ List<Record> records = queryRunner
                 .param(Lists.newArrayList("12345", "23333"), toSqlTimestamp("2020-08-20 12:00:00"))                  
                 .queryList(Record.class);														
 ```
-
-<br>
 
 #### upsert 新增/更新操作
 
@@ -119,8 +117,6 @@ queryRunner.batchUpdate("upsert into test.record(uid, punch_date, username, amou
                 .putParam("53333", toSqlTimestamp("2020-08-20 12:12:12"), "Darcy", 999)
                 .update();
 ```
-
- <br>
 
 #### delete 删除操作 
 
