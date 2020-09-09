@@ -30,7 +30,7 @@ public class PhoenixSelectInQueryTest {
 
     @BeforeAll
     public void initJdbcUrl() throws SQLException {
-        queryRunner = PhoenixDbUtil.queryRunner("jdbc:phoenix:do1cloud01,do1cloud02,do1cloud03");
+        queryRunner = PhoenixDbUtil.queryRunner("jdbc:phoenix:hdp01,hdp02,hdp03");
     }
 
     @DisplayName("PhxSelectQuery select in 查询测试")
