@@ -34,8 +34,24 @@
             <version>${phoenix.version}</version>
             <exclusions>
                 <exclusion>
+                    <artifactId>commons-logging</artifactId>
+                    <groupId>commons-logging</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>slf4j-log4j12</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>servlet-api</artifactId>
+                    <groupId>javax.servlet</groupId>
+                </exclusion>
+                <exclusion>
                     <groupId>org.glassfish.web</groupId>
                     <artifactId>javax.servlet.jsp</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.servlet.jsp</groupId>
+                    <artifactId>jsp-api</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -102,44 +118,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <id>maven-ali</id>
-            <url>https://maven.aliyun.com/repository/public</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-                <checksumPolicy>fail</checksumPolicy>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>DO1</id>
-            <name>DO1 Maven Repository</name>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <url>http://dqdp.do1.com.cn/mvnrepository/content/groups/public</url>
-        </repository>
-    </repositories>
-
-    <distributionManagement>
-        <repository>
-            <id>releases</id>
-            <name>display</name>
-            <url>http://dqdp.do1.com.cn/mvnrepository/content/repositories/thirdparty</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>display</name>
-            <url>http://dqdp.do1.com.cn/mvnrepository/content/repositories/thirdparty</url>
-        </snapshotRepository>
-    </distributionManagement>
 
 </project>
