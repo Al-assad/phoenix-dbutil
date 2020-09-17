@@ -5,7 +5,7 @@
 
     <groupId>site.assad</groupId>
     <artifactId>do1cloud-phoenix-dbutil</artifactId>
-    <version>1.0.0</version>
+    <version>1.2.0</version>
     <name>phoenix轻量客户端</name>
 
     <description>轻量化phoenix-orm客户端，基于Apache commons-dbutils</description>

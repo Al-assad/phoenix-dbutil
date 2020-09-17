@@ -1,5 +1,6 @@
 package site.assad.phoenix.dbutil;
 
+import java.io.Serializable;
 import java.util.Properties;
 
 
@@ -9,7 +10,9 @@ import java.util.Properties;
  * @author yulinying
  * @since 2020/8/28
  */
-public class PhxConnectInfo {
+public class PhxConnectInfo implements Serializable {
+
+    private static final long serialVersionUID = -2718025871023199454L;
 
     private String jdbcUrl;
     private Properties props;
