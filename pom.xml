@@ -103,6 +103,32 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>maven-ali</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>DO1</id>
+            <name>DO1 Maven Repository</name>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <url>http://dqdp.do1.com.cn/mvnrepository/content/groups/public</url>
+        </repository>
+    </repositories>
+
     <distributionManagement>
         <repository>
             <id>releases</id>
