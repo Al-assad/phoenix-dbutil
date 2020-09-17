@@ -11,7 +11,6 @@ import site.assad.phoenix.dbutil.query.impl.DefaultPhxSelectQuery;
 import site.assad.phoenix.dbutil.query.impl.DefaultPhxUpdateQuery;
 
 import javax.annotation.Nonnull;
-import java.io.Serializable;
 import java.util.Properties;
 
 /**
@@ -20,9 +19,7 @@ import java.util.Properties;
  * @author yulinying
  * @since 2020/8/19
  */
-public class PhxQueryRunner implements Serializable {
-
-    private static final long serialVersionUID = 4727702924617809952L;
+public class PhxQueryRunner {
 
     private PhxConnectInfo connectInfo;
 
